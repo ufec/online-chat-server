@@ -1,0 +1,37 @@
+app:
+  port: 3095
+  dbtype: mysql
+  prefix: /api
+  logger:
+    dir: ./logs
+    daysToKeep: 30
+    numBackups: 3
+
+db:
+  mysql:
+    host: ''
+    password: ''
+    username: 'online'
+    database: 'online'
+    port: 3306
+    charset: 'utf8mb4'
+    logger: 'file'
+    logging: true
+    multipleStatements: true
+    dropSchema: false
+    synchronize: true
+    supportBigNumbers: true
+    bigNumberStrings: true
+    entityPrefix: 'oc_'
+
+redis:
+  host: ''
+  password: ''
+  port: 6379
+  db: 0
+  keyPrefix: 'nest_'
+
+jwt:
+  secretKey: 'jsdcjsguhe23ufejh#$#@#$%YHGFDW$%^&*(OP:)' # jwt密钥十分重要，勿泄露
+  issuer: 'online-chat' # jwt发行者
+  expiresIn: 3600 # jwt有效期
